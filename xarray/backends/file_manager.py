@@ -330,7 +330,7 @@ class _HashedSequence(list):
 
     def __init__(self, tuple_value):
         self[:] = tuple_value
-        self.hashvalue = hash(tuple_value)
+        self.hashvalue = id(tuple_value)
 
     def __hash__(self):
         return self.hashvalue
